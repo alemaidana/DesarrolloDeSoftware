@@ -1,0 +1,26 @@
+Realizar los siguientes ejercicios en pseudocodigo
+
+1.- Escribir  un programa que permita leer la edad y peso de una persona y posteriormente imprimirla.
+
+2.- Escribir  un programa que calcule el área de un triángulo recibiendo como entrada el valor de base y altura.
+
+3.- Escribir  un programa que calcule el área de un círculo.
+
+4.- Escribir  un programa que dados 2 valores de entrada imprima siempre la división del mayor entre el menor.
+
+5.- Escribir  un programa que lea de entrada 3 números y que indique cual es el mayor de ellos.
+
+6.- Escribir  un programa que lea 3 números los cuales significan una fecha (día, mes, año). Comprobar que sea válida la fecha, si no es valido que imprima un mensaje de error, y si es válida imprimir el mes con su nombre.
+
+7.- Escribir  un programa que pida la edad y el sexo y dependiendo si es hombre o mujer y si puede votar o no.
+
+8.- Realice un programa   que calcule la nómina salarial neto, de unos obreros cuyo trabajo se paga en horas. El cálculo se realiza de la siguiente forma:
+- Las primeras 35 horas a una tarifa fija.
+- Las horas extras se pagan a 1.5 más de la tarifa fija.
+- Los impuestos a deducir de los trabajadores varian, segun el sueldo mensual si el sueldo es menos a $20,000.00 el sueldo es libre de impuesto y si es al contrario se cobrará un 20% de impuesto.
+
+9.- Escribir un Pseudocódigo que encuentre y despliegue los números primos entre uno y cien. Un número primo es divisible entre el mismo y la unidad por lo tanto un numero primo no puede ser par excepto el dos (2).
+
+10.- Hacer un Pseudocódigo que calcule el factorial de un número.
+
+11.- Hacer un Pseudocodigo que despliegue las tablas de multiplicar.
