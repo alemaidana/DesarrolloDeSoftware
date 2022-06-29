@@ -309,6 +309,9 @@ string Fecha::dameFecha(){
 
 
 
+
+//strcpy(arr, str.c_str());
+
 void Fecha::Menu(){
 
 		

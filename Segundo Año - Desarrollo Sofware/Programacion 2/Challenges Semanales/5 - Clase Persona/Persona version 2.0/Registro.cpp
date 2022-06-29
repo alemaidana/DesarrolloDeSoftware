@@ -5,38 +5,68 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-
-
 using namespace std;
 
 class Registro{
 	
+	private:
+		fstream archivo;
 	public:
-	//creamos el metodo cargar datos
-	string cargarDatos();
+		void Guardar(Persona);
+		void Mostrar();
 };
 
-
-int main(){
+void Registro::Guardar(Persona persona){
 	
-	Registro registro;
+	this->archivo.open("Personas.bin", ios::out | ios::app | ios::binary);
 	
-	cout << registro.cargarDatos();
+	if(this->archivo.fail()){
+		
+		cout << "Error en el guardado";
+		
+	}else{
+		
+		this->archivo.write((char*)&persona, sizeof(Persona));
+		this->archivo.close();
+		cout << "Guardado Correctamente" << endl;
+		
+	}	
+	
+	
 	
 }
 
-
-string Registro::cargarDatos(){
 	
-		Persona nueva;
+void Registro::Mostrar(){
+	
+	Persona mostrar = Persona();
+	this->archivo.open("Personas.bin", ios::in | ios::binary);
+	
+	if(this->archivo.fail()){
 		
-		nueva.setNombre();
+		cout << "Error al mostrar la persona";
 		
-		nueva.setApellido();
-		
-		nueva.validarFechaNacimiento();
-		
-		return nueva.getNombre() + " " + nueva.getApellido() + " " + nueva.getFn();
+	}else{
+	
+			while(!this->archivo.eof()){
+				
+				this->archivo.read((char)&mostrar, sizeof(Persona));
+				
+				if(!this->archivo.eof()){
+					
+					mostrar.Imprimir();
+					
+				}
+				
+				
+			}
+	
+			
+			this->archivo.close();
+	
+	}
 }
 
+	
+	
+}

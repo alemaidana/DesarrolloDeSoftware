@@ -10,24 +10,30 @@ using namespace std;
 class Persona{
 	private:
 		//ingresamos las variables de los datos de la persona
+		int cod;
 		string nombre, apellido, genero, dni, celular, correo, fn;
 		
-	public:		
+	public:
+		Persona();		
 		//setters
-		void setNombre();
-		void setApellido();
-		void setGenero();
-		void setDni();
-		void setCelular();
-		void setCorreo();
+		void setCodigo(int codigo);
+		void setNombre(string nombre);
+		void setApellido(string apellido);
+		void setGenero(string genero);
+		void setDni(string dni);
+		void setCelular(string celular);
+		void setCorreo(string correo);
+		void setFechaNacimiento(string fecha);
 		
 		//getters
+		int getCodigo();
 		string getNombre();
 		string getApellido();
 		string getGenero();
 		string getDni();
 		string getCelular();
 		string getCorreo();
+		string getFechaNacimiento();
 		string getFn();
 
 		//Metodos
@@ -39,74 +45,79 @@ class Persona{
 		bool validarCelular();
 		//creamos el metodo validar que nos va a verficar si el correo es correcto
 		bool validarCorreo();
-
+		//actualizar los datos
+		void actualizarPersona(int codigo, string nombre, string apellido, string genero, string dni, string celular, string correo, string fecha_nacimiento);
+		//imprime los datos
+		void Imprimir();
 };
 
-
-
-
-void Persona::setNombre(){
+Persona::Persona(){
 	
-	cout << "Ingrese nombre:";
+	this->cod = 0;
+	this->nombre = "";
+	this->apellido = "";
+	this->genero = "";
+	this->dni = "";
+	this->celular = "";
+	this->correo = "";
+	this->fn = "";
 	
-	cin >> nombre; 
+}
+
+
+void Persona::setCodigo(int codigo){
+	
+	this->cod = codigo;
+}
+
+
+void Persona::setNombre(string nombre){
 	
 	this->nombre = nombre;
 	
 }
 
-void Persona::setApellido(){
-	
-	cout << "Ingrese apellido:";
-	
-	cin >> apellido; 
+void Persona::setApellido(string apellido){
 	
 	this->apellido = apellido;
 	
 }
 
-void Persona::setGenero(){
-	
-	cout << "Ingrese genero:";
-	
-	cin >> genero; 
+void Persona::setGenero(string genero){
 	
 	this->genero = genero;
 	
 	
 }
 
-void Persona::setDni(){
-	
-	cout << "Ingrese Dni:";
-	
-	cin >> dni; 
+void Persona::setDni(string dni){
 	
 	this->dni = dni;
 	
 }
 
-void Persona::setCelular(){
-	
-	cout << "Ingrese Celular:";
-	
-	cin >> celular; 
-	
+void Persona::setCelular(string celular){
+		
 	this->celular = celular;
 	
 }
 
-void Persona::setCorreo(){
-	
-	cout << "Ingrese Correo:";
-	
-	cin >> correo; 
+void Persona::setCorreo(string correo){
 	
 	this->correo = correo;
-	
-	
+		
 }
 
+void Persona::setFechaNacimiento(string fecha){
+	
+	this->fn = fecha;	
+}
+
+
+int Persona::getCodigo(){
+	
+	return this->cod;
+}
 
 string Persona::getNombre(){
 	
@@ -266,6 +277,34 @@ bool Persona::validarCorreo(){
 	}
 	
 }
+
+
+void Persona::actualizarPersona(int codigo, string nombre, string apellido, string genero, string dni, string celular, string correo, string fecha_nacimiento){
+	
+	this->cod = codigo;
+	this->nombre = nombre;
+	this->apellido = apellido;
+	this->genero = genero;
+	this->dni = dni;
+	this->celular = celular;
+	this->correo = correo;
+	this->fn = fecha_nacimiento;
+	
+}
+
+void Persona::Imprimir(){
+	
+	cout << "Codigo:" << this->cod << endl;
+	cout << "Nombre:" << this->nombre << endl;
+	cout << "Apellido:" << this->apellido << endl;
+	cout << "Genero:" << this->genero << endl;
+	cout << "Dni:" << this->dni << endl;
+	cout << "Celular:" << this->celular << endl;
+	cout << "Correo:" << this->correo << endl;
+	cout << "Fecha nacimiento:" << this->fn << endl;
+	
+}
+
 
 
 

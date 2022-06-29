@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cstring>
 #include <string>
- 
+#include "fecha2.h" 
 using namespace std;
  
 class Persona{

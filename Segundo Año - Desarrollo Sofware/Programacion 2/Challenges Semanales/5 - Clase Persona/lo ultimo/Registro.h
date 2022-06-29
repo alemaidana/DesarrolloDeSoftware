@@ -91,7 +91,8 @@ void Registro::Modificar(int id){
             if(aux.obtenerCodigo() == id){
                 
                 encontrado = true;
-                 int c;
+                Fecha fecha;
+				int c;
 	            string n,a,ca,g,te,co,fn;
 	            cout << "Codigo:";
 	            cin >> c;
@@ -107,8 +108,8 @@ void Registro::Modificar(int id){
 	            cin >> te;
 	            cout << "Correo:";
 	            cin >> co;
-	            cout << "Fecha Nacimiento:";
-	            cin >> fn; 
+				fecha.Menu();
+            	fn = fecha.dameFecha(); 
 	 
                 aux.ActualizarDatos(c, _strdup(n.c_str()),_strdup(a.c_str()),_strdup(ca.c_str()), _strdup(g.c_str()), _strdup(te.c_str()), _strdup(co.c_str()), _strdup(fn.c_str()));
                 escritura.write((char*)&aux, sizeof(aux));
